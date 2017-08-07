@@ -14,6 +14,17 @@ var appShellFilesToCache = [
   './vendor.bundle.js'
 ];
 
+// prod
+// var appShellFilesToCache = [
+//   './',
+//   './index.html',
+//   './inline.*.bundle.js',
+//   './main.*.bundle.js',
+//   './polyfills.*.bundle.js',
+//   './styles.*.bundle.js',
+//   './vendor.*.bundle.js'
+// ];
+
 self.addEventListener('install', function(e) {
   e.waitUntil(self.skipWaiting());
   log('Service Worker: Installed');

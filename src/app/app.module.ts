@@ -8,17 +8,20 @@ import { RouterModule } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MdToolbarModule, MdListModule, MdProgressBarModule } from '@angular/material';
 import { AppShellModule } from '@angular/app-shell';
+import { ServiceWorkerModule } from '@angular/service-worker'
 
 import { AppComponent } from './app.component';
 import { BeerListComponent } from './beer/beer-list.component';
 import { BeerService } from './shared/beer/beer.service';
 import { GiphyService } from './shared/giphy/giphy.service';
+import { PushComponent } from './push/push.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    BeerListComponent
+    BeerListComponent,
+    PushComponent
   ],
   imports: [
     CommonModule,
@@ -32,7 +35,8 @@ import { GiphyService } from './shared/giphy/giphy.service';
     MdToolbarModule,
     MdListModule,
     MdProgressBarModule,
-    AppShellModule.runtime()
+    AppShellModule.runtime(),
+    ServiceWorkerModule
   ],
   providers: [
     BeerService, GiphyService
