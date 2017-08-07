@@ -7,6 +7,7 @@ import { RouterModule } from '@angular/router';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MdToolbarModule, MdListModule, MdProgressBarModule } from '@angular/material';
+import { AppShellModule } from '@angular/app-shell';
 
 import { AppComponent } from './app.component';
 import { BeerListComponent } from './beer/beer-list.component';
@@ -30,7 +31,8 @@ import { GiphyService } from './shared/giphy/giphy.service';
     BrowserAnimationsModule,
     MdToolbarModule,
     MdListModule,
-    MdProgressBarModule
+    MdProgressBarModule,
+    AppShellModule.runtime()
   ],
   providers: [
     BeerService, GiphyService
